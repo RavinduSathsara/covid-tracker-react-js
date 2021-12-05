@@ -25,7 +25,10 @@ const App = () => {
           align="center"
         >
           {"Copyright © "}
-          <Link color="inherit" href="https://mui.com/">
+          <Link
+            color="inherit"
+            href="https://www.linkedin.com/in/ravindu-sathsara-a588aa218/"
+          >
             Ravindu Sathsara
           </Link>{" "}
           {new Date().getFullYear()}
