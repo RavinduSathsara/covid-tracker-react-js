@@ -5,9 +5,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-export default function MediaControlCard(props) {
+export default function CasesControlCard(props) {
   return (
-    <Card sx={{ maxWidth: 345, margin: 2 }}>
+    <Card sx={{ maxWidth: 345, margin: 3 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -20,7 +20,8 @@ export default function MediaControlCard(props) {
             New Cases
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            <h1>{props.newCase}</h1>
+            <h1>Cases : {props.local_new_cases}</h1>
+            <p> According to : {props.update_date_time}</p>
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -5,12 +5,17 @@ import Home from "./screens/Home/Home";
 //import MUi
 import CssBaseline from "@mui/material/CssBaseline";
 
+import LinearProgress from "@mui/material/LinearProgress";
+
 import Container from "@mui/material/Container";
 
 const App = () => {
   return (
     <div>
-      <CssBaseline /> <ButtonAppBar />
+      <CssBaseline />
+
+      <ButtonAppBar />
+      <LinearProgress />
       <Container fixed>
         <Home />
       </Container>
