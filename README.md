@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Test app (https://covid-19-tracker-sri-lanka.herokuapp.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
