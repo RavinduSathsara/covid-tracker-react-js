@@ -22,7 +22,7 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Covid 19 tracker Sri Lanaka
+            Covid 19 tracker Sri Lanka
           </Typography>
         </Toolbar>
       </AppBar>

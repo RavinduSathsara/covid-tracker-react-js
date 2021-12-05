@@ -17,7 +17,7 @@ export default function MultiActionAreaCard(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Summery
+            Summary
           </Typography>
           <Typography variant="body2" color="text.secondary">
             <h3>Total cases: {props.local_total_cases}</h3>
