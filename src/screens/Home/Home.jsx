@@ -10,6 +10,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import GloblectionAreaCard from "../../components/GlobleActionAreaCard/GlobleActionAreaCard";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -83,6 +84,14 @@ const Home = () => {
               local_deaths={items.data.local_deaths}
               update_date_time={items.data.update_date_time}
               local_recovered={items.data.local_recovered}
+            />
+          </Grid>
+          <Grid item xs>
+            <GloblectionAreaCard
+              global_new_cases={items.data.global_new_cases}
+              global_total_cases={items.data.global_total_cases}
+              global_recovered={items.data.global_recovered}
+              update_date_time={items.data.update_date_time}
             />
           </Grid>
         </Grid>
