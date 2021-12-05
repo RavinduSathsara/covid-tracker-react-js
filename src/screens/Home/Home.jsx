@@ -1,23 +1,14 @@
 import React from "react";
 import CasesControlCard from "../../components/CasesControlCard/CasesControlCard";
 import { useState, useEffect } from "react";
-import Button from "@mui/material/Button";
+
 import LinearBuffer from "../../components/LinearBuffer/LinearBuffer";
 import MultiActionAreaCard from "../../components/MultiActionAreaCard/MultiActionAreaCard";
 
 //MUI
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
+
 import Grid from "@mui/material/Grid";
 import GloblectionAreaCard from "../../components/GlobleActionAreaCard/GlobleActionAreaCard";
-
-const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
-  padding: theme.spacing(3),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
 
 const Home = () => {
   const [error, setError] = useState(null);
