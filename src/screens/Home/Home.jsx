@@ -3,14 +3,29 @@ import CasesControlCard from "../../components/CasesControlCard/CasesControlCard
 import { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import LinearBuffer from "../../components/LinearBuffer/LinearBuffer";
+import MultiActionAreaCard from "../../components/MultiActionAreaCard/MultiActionAreaCard";
+
+//MUI
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
+
+const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(3),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
+
 const Home = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [count, setCount] = useState(2);
+
   const [items, setItems] = useState({
     data: {
       update_date_time: "2021-12-04 22:04:49",
-      local_new_cases: 740,
+      local_new_cases: 7400000,
       local_total_cases: 566936,
       local_total_number_of_individuals_in_hospitals: 9536,
       local_deaths: 14440,
@@ -54,17 +69,23 @@ const Home = () => {
   } else {
     return (
       <div>
-        {/* <Button variant="contained" onClick={setCount(count + 1)}>
-          Contained
-        </Button> */}
-        {count === 1 ? (
-          " Click to view "
-        ) : (
-          <CasesControlCard
-            local_new_cases={items.data.local_new_cases}
-            update_date_time={items.data.update_date_time}
-          />
-        )}
+        <Grid container spacing={0}>
+          <Grid item xs>
+            <CasesControlCard
+              local_new_cases={items.data.local_new_cases}
+              local_new_deaths={items.data.local_new_deaths}
+              update_date_time={items.data.update_date_time}
+            />
+          </Grid>
+          <Grid item xs>
+            <MultiActionAreaCard
+              local_total_cases={items.data.local_total_cases}
+              local_deaths={items.data.local_deaths}
+              update_date_time={items.data.update_date_time}
+              local_recovered={items.data.local_recovered}
+            />
+          </Grid>
+        </Grid>
       </div>
     );
   }
