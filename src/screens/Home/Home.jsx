@@ -69,7 +69,7 @@ const Home = () => {
   } else {
     return (
       <div>
-        <Grid container spacing={0}>
+        <Grid container spacing={5}>
           <Grid item xs>
             <CasesControlCard
               local_new_cases={items.data.local_new_cases}
