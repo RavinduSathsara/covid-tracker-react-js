@@ -6,7 +6,7 @@ import Home from "./screens/Home/Home";
 import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
 import LinearProgress from "@mui/material/LinearProgress";
-import Link from "@mui/material/Link";
+import CopyrightIcon from "@mui/icons-material/Copyright";
 import Container from "@mui/material/Container";
 
 const App = () => {
@@ -18,22 +18,23 @@ const App = () => {
       <LinearProgress />
       <Container fixed>
         <Home />
-        <Typography
-          sx={{ p: 10 }}
-          variant="body2"
-          color="text.secondary"
-          align="center"
+        <footer
+          style={{
+            padding: "60px 0",
+          }}
         >
-          {"Copyright © "}
-          <Link
-            color="inherit"
-            href="https://www.linkedin.com/in/ravindu-sathsara-a588aa218/"
+          <Typography variant="h6" align="center">
+            Covid 19 Tracker
+          </Typography>
+          <Typography
+            style={{ margin: "5px" }}
+            variant="subtitle1"
+            align="center"
+            color="textSecondary"
           >
-            Ravindu Sathsara
-          </Link>{" "}
-          {new Date().getFullYear()}
-          {"."}
-        </Typography>
+            <CopyrightIcon fontSize="small" /> Ravindu Sathsara
+          </Typography>
+        </footer>
       </Container>
     </div>
   );
